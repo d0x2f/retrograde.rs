@@ -43,4 +43,4 @@ jobs:
       - name: Docker push
         run: gcloud auth configure-docker && docker push gcr.io/retrograde/retrograde:latest
       - name: Deploy new cloudrun revision
-        run: gcloud beta run deploy retrotools-api --image gcr.io/retrograde/retrograde:latest --platform managed --region=us-east1 --project=${{ secrets.GCP_PROJECT }} --no-traffic
+        run: gcloud beta run deploy retrotools --image gcr.io/retrograde/retrograde:latest --platform managed --region=us-east1 --project=${{ secrets.GCP_PROJECT }}
